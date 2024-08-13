@@ -1,0 +1,10 @@
+{% extends 'music/base.html' %} {% block content %}
+<h2>Train Model</h2>
+<form action="{% url 'train' %}" method="post">
+  {% csrf_token %}
+  <button type="submit" class="btn btn-primary">Train Model</button>
+</form>
+{% if accuracy %}
+<h3>Training Results</h3>
+<p>Accuracy: {{ accuracy }}</p>
+{% endif %} {% endblock %}

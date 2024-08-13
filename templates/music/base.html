@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Rhythm Detection</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="{% url 'home' %}">Music Rhythm Detection</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'home' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'train' %}">Train Model</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'upload' %}">Upload Music</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'history' %}">Result History</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container mt-5">{% block content %} {% endblock %}</div>
+  </body>
+</html>

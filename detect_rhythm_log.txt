@@ -1,0 +1,5 @@
+Running command: ['python3', 'music/detect_rhythm.py', 'tmp/audio_2.wav']
+Subprocess stdout:
+None
+Subprocess stderr:
+None
